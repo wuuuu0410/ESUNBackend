@@ -13,55 +13,50 @@ public class SeatingChart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long floor_seat_seq;
+    @Column(name="floor_seat_seq")
+    private Long floorSeatSeq;
 
-    private int floor_no;
+    @Column(name="floor_no")
+    private int floorNo;
 
-    private int seat_no;
-
-    private Boolean status;
+    @Column(name="seat_no")
+    private int seatNo;
 
     public SeatingChart() {
     }
 
-    public SeatingChart(Long floor_seat_seq, int floor_no, int seat_no, Boolean status) {
-        this.floor_seat_seq = floor_seat_seq;
-        this.floor_no = floor_no;
-        this.seat_no = seat_no;
-        this.status = status;
+    public SeatingChart(Long floor_seat_seq, int floor_no, int seat_no) {
+        this.floorSeatSeq = floor_seat_seq;
+        this.floorNo = floor_no;
+        this.seatNo = seat_no;
+    }
+
+    public SeatingChart(int floor_no, int seat_no) {
+        this.floorNo = floor_no;
+        this.seatNo = seat_no;
     }
 
     public Long getFloor_seat_seq() {
-        return floor_seat_seq;
+        return floorSeatSeq;
     }
 
     public void setFloor_seat_seq(Long floor_seat_seq) {
-        this.floor_seat_seq = floor_seat_seq;
+        this.floorSeatSeq = floor_seat_seq;
     }
 
     public int getFloor_no() {
-        return floor_no;
+        return floorNo;
     }
 
     public void setFloor_no(int floor_no) {
-        this.floor_no = floor_no;
+        this.floorNo = floor_no;
     }
 
     public int getSeat_no() {
-        return seat_no;
+        return seatNo;
     }
 
     public void setSeat_no(int seat_no) {
-        this.seat_no = seat_no;
+        this.seatNo = seat_no;
     }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-
 }

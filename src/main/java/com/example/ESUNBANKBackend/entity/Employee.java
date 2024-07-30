@@ -1,5 +1,6 @@
 package com.example.ESUNBANKBackend.entity;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,16 +20,23 @@ public class Employee {
 
     private String email;
 
-    private Long floor_seat_seq;
+    @Column(name="floor_seat_seq")
+    private Long floorSeatSeq;
 
     public Employee() {
+    }
+
+    public Employee(String name, String email, Long floor_seat_seq) {
+        this.name = name;
+        this.email = email;
+        this.floorSeatSeq = floor_seat_seq;
     }
 
     public Employee(Long emp_id, String name, String email, Long floor_seat_seq) {
         this.emp_id = emp_id;
         this.name = name;
         this.email = email;
-        this.floor_seat_seq = floor_seat_seq;
+        this.floorSeatSeq = floor_seat_seq;
     }
 
     public Long getEmp_id() {
@@ -56,11 +64,11 @@ public class Employee {
     }
 
     public Long getFloor_seat_seq() {
-        return floor_seat_seq;
+        return floorSeatSeq;
     }
 
     public void setFloor_seat_seq(Long floor_seat_seq) {
-        this.floor_seat_seq = floor_seat_seq;
+        this.floorSeatSeq = floor_seat_seq;
     }
 
     
