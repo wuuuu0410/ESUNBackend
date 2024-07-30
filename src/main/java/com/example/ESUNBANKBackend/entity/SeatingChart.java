@@ -17,21 +17,21 @@ public class SeatingChart {
     private Long floorSeatSeq;
 
     @Column(name="floor_no")
-    private int floorNo;
+    private Integer floorNo;
 
     @Column(name="seat_no")
-    private int seatNo;
+    private Integer seatNo;
 
     public SeatingChart() {
     }
 
-    public SeatingChart(Long floor_seat_seq, int floor_no, int seat_no) {
+    public SeatingChart(Long floor_seat_seq, Integer floor_no, Integer seat_no) {
         this.floorSeatSeq = floor_seat_seq;
         this.floorNo = floor_no;
         this.seatNo = seat_no;
     }
 
-    public SeatingChart(int floor_no, int seat_no) {
+    public SeatingChart(Integer floor_no, Integer seat_no) {
         this.floorNo = floor_no;
         this.seatNo = seat_no;
     }
@@ -44,19 +44,19 @@ public class SeatingChart {
         this.floorSeatSeq = floor_seat_seq;
     }
 
-    public int getFloor_no() {
+    public Integer getFloor_no() {
         return floorNo;
     }
 
-    public void setFloor_no(int floor_no) {
+    public void setFloor_no(Integer floor_no) {
         this.floorNo = floor_no;
     }
 
-    public int getSeat_no() {
+    public Integer getSeat_no() {
         return seatNo;
     }
 
-    public void setSeat_no(int seat_no) {
+    public void setSeat_no(Integer seat_no) {
         this.seatNo = seat_no;
     }
 }

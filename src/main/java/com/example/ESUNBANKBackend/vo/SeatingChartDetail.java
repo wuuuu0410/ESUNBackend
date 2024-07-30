@@ -4,9 +4,9 @@ public class SeatingChartDetail {
 
     private Long floor_seat_seq;
 
-    private int floor_no;
+    private Integer floor_no;
 
-    private int seat_no;
+    private Integer seat_no;
 
     private Long emp_id;
 
@@ -17,7 +17,7 @@ public class SeatingChartDetail {
     public SeatingChartDetail() {
     }
 
-    public SeatingChartDetail(Long floor_seat_seq, int floor_no, int seat_no, Long emp_id, String name, String email) {
+    public SeatingChartDetail(Long floor_seat_seq, Integer floor_no, Integer seat_no, Long emp_id, String name, String email) {
         this.floor_seat_seq = floor_seat_seq;
         this.floor_no = floor_no;
         this.seat_no = seat_no;
@@ -30,11 +30,11 @@ public class SeatingChartDetail {
         return floor_seat_seq;
     }
 
-    public int getFloor_no() {
+    public Integer getFloor_no() {
         return floor_no;
     }
 
-    public int getSeat_no() {
+    public Integer getSeat_no() {
         return seat_no;
     }
 

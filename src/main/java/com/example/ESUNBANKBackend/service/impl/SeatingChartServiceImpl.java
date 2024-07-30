@@ -63,5 +63,4 @@ public class SeatingChartServiceImpl implements SeatingChartService{
         return new SearchSeatingChartRes(ResMessage.SUCCESS.getCode(),ResMessage.SUCCESS.getMessage(),SeatingChartDetailList);
     }
 
-    
 }
