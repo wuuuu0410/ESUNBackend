@@ -8,10 +8,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "employee")
 public class Employee {
     
+    //員工編號pk自動生成
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long emp_id;

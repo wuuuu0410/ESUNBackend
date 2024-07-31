@@ -13,6 +13,7 @@ import com.example.ESUNBANKBackend.entity.Employee;
 @Repository
 public interface EmployeeDao extends JpaRepository<Employee,Long>{
 
+    //搜尋員工id和名字
     @Query("SELECT r FROM Employee r WHERE "
     + "(:emp_id IS null OR r.emp_id = :emp_id) AND"
     + "(:name IS NULL OR r.name LIKE %:name%)")
@@ -21,5 +22,9 @@ public interface EmployeeDao extends JpaRepository<Employee,Long>{
         @Param("name") String name
     );
 
+    //透過座位id搜尋員工
     public Optional<Employee> findByFloorSeatSeq(Long floorSeatSeq);
+
+    //檢查信箱是否已存在
+    public boolean existsByEmail(String email);
 }

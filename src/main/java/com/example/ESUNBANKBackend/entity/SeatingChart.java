@@ -11,6 +11,7 @@ import jakarta.persistence.Table;
 @Table(name = "seatingchart")
 public class SeatingChart {
 
+    //座位編號pk自動生成
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="floor_seat_seq")

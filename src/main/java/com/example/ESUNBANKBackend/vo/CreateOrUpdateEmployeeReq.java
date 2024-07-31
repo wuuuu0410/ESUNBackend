@@ -1,11 +1,18 @@
 package com.example.ESUNBANKBackend.vo;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+
 public class CreateOrUpdateEmployeeReq {
 
     private Long emp_id;
 
+    @NotBlank
     private String name;
 
+    @NotEmpty(message = "Email empty")
+    @Email(message = "Email Incorrect format")
     private String email;
 
     private Long floor_seat_seq;
